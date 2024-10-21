@@ -1,7 +1,7 @@
 # tarea1-indexar.py:
 # CC5213 - TAREA 1 - RECUPERACIÓN DE INFORMACIÓN MULTIMEDIA
 # 11 de agosto de 2024
-# Alumno: [Tu Nombre]
+# Alumno: [Juan Vicente Onetto Romero]
 
 import sys
 import os
@@ -39,7 +39,7 @@ def calcular_histograma_color(imagen, bins=(8, 8, 8)):
     
     return hist
 
-def calcular_descriptor(imagen_path, tamaño=(10, 10)):
+def calcular_descriptor(imagen_path, tamaño=(20, 20)):
     """
     Calcula un descriptor de intensidades para una imagen dada.
     
@@ -67,7 +67,7 @@ def calcular_descriptor(imagen_path, tamaño=(10, 10)):
         print(f"Error procesando {imagen_path}: {e}")
         return None
 
-def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R, tamaño=(10, 10)):
+def tarea1_indexar(dir_input_imagenes_R, dir_output_descriptores_R, tamaño=(20, 20)):
     if not os.path.isdir(dir_input_imagenes_R):
         print(f"ERROR: no existe directorio {dir_input_imagenes_R}")
         sys.exit(1)

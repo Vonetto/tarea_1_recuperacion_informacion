@@ -1,7 +1,7 @@
 # tarea1-buscar.py:
 # CC5213 - TAREA 1 - RECUPERACIÓN DE INFORMACIÓN MULTIMEDIA
 # 11 de agosto de 2024
-# Alumno: [Tu Nombre]
+# Alumno: [Juan Vicente Onetto Romero]
 
 import sys
 import os
@@ -40,7 +40,7 @@ def calcular_histograma_color(imagen, bins=(8, 8, 8)):
     
     return hist
 
-def calcular_descriptor(imagen_path, tamaño=(10, 10)):
+def calcular_descriptor(imagen_path, tamaño=(20, 20)):
     """
     Calcula un descriptor de intensidades para una imagen dada.
     
@@ -111,7 +111,7 @@ def tarea1_buscar(dir_input_imagenes_Q, dir_input_descriptores_R, file_output_re
                 imagen_cv_Q = cv2.imread(ruta_imagen_Q, cv2.IMREAD_GRAYSCALE)
                 if imagen_cv_Q is not None:
                     imagen_flip_Q = cv2.flip(imagen_cv_Q, 1)  # Flip horizontal
-                    imagen_flip_resized_Q = cv2.resize(imagen_flip_Q, (10,10), interpolation=cv2.INTER_AREA)
+                    imagen_flip_resized_Q = cv2.resize(imagen_flip_Q, (20, 20), interpolation=cv2.INTER_AREA)
                     descriptor_flip_Q = imagen_flip_resized_Q.flatten()
                     descriptor_flip_Q = descriptor_flip_Q / (np.linalg.norm(descriptor_flip_Q) + 1e-7)
                 else:
